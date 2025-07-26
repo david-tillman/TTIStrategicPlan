@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTI Strategic Framework</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #3d8991 0%, #3d8991 100%);
+            min-height: 100vh;
+            padding: 5px;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .header-layout {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .header-image-left {
+            flex: 0 0 auto;
+        }
+
+        .header-image-left img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .hero-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-image img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .text-wrap-section {
+            overflow: hidden;
+        }
+
+        .wrap-image {
+            float: left;
+            margin: 0 20px 15px 0;
+            max-width: 300px;
+        }
+
+        .wrap-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .wrap-image-right {
+            float: right;
+            margin: 0 0 15px 20px;
+            max-width: 300px;
+        }
+
+        .wrap-image-right img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .section-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .goal-image {
+            float: left;
+            margin: 0 20px 15px 0;
+            max-width: 300px;
+        }
+
+        .goal-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .goal-image.small {
+            max-width: 225px;
+        }
+
+        .goal-image.small img {
+            width: 100%;
+        }
+
+        .goal-image.smaller {
+            max-width: 210px;
+        }
+
+        .goal-image.smaller img {
+            width: 100%;
+        }
+
+        .footer-link-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .action-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3d8991 0%, #98b852 100%);
+            color: white;
+            padding: 19px 38px;
+            font-size: 1.375em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-image {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .footer-image img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .main-title {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 3px solid #98b852;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.6em;
+            margin: 20px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.3em;
+            margin: 20px 0 12px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #34495e;
+            font-size: 1.1em;
+            margin: 15px 0 8px 0;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.05em;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .goal-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            margin: 15px 0;
+            padding: 5px;
+            border-radius: 12px;
+            border-left: 5px solid #98b852;
+            overflow: hidden;
+        }
+
+        .goal-section:nth-of-type(2) { border-left-color: #2ecc71; }
+        .goal-section:nth-of-type(3) { border-left-color: #f39c12; }
+
+        .goal-header {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 8px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .goal-header:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .goal-title {
+            display: block;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .goal-title h1 {
+            margin-bottom: 10px;
+        }
+
+        .expand-icon {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 1.3em;
+            transition: transform 0.3s ease;
+            color: #98b852;
+        }
+
+        .goal-header.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .goal-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .goal-content.expanded {
+            max-height: 2000px;
+        }
+
+        .strategy-section {
+            background: rgba(255, 255, 255, 0.7);
+            margin: 15px 0;
+            padding: 5px;
+            border-radius: 8px;
+            border-left: 4px solid #95a5a6;
+        }
+
+        ul {
+            margin: 12px 0 12px 25px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            color: #555;
+            font-size: 1.05em;
+        }
+
+        .timeline-section {
+            background: #f8f9fa;
+            padding: 5px;
+        }
+
+        .timeline-section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .timeline-section-title h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            border: none;
+            padding: 0;
+        }
+
+        .timeline-section-title p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 15px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #98b852, #2ecc71, #f39c12, #e74c3c);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 25px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+
+        .timeline-content {
+            width: 45%;
+            padding: 5px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border-left: 4px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 0;
+            border-left-color: #98b852;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 55%;
+            border-left-color: #2ecc71;
+        }
+
+        .timeline-item:nth-child(3) .timeline-content {
+            border-left-color: #f39c12;
+        }
+
+        .timeline-item:nth-child(4) .timeline-content {
+            border-left-color: #e74c3c;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid;
+            transform: translateX(-50%);
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-marker {
+            border-color: #98b852;
+        }
+
+        .timeline-item:nth-child(even) .timeline-marker {
+            border-color: #2ecc71;
+        }
+
+        .timeline-item:nth-child(3) .timeline-marker {
+            border-color: #f39c12;
+        }
+
+        .timeline-item:nth-child(4) .timeline-marker {
+            border-color: #e74c3c;
+        }
+
+        .timeline-item:hover .timeline-marker {
+            transform: translateX(-50%) scale(1.2);
+        }
+
+        .phase-number {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background: linear-gradient(45deg, #3d8991, #3d8991);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 26px;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .phase-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .phase-date {
+            color: #98b852;
+            font-weight: 600;
+            font-size: 0.85em;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .phase-description {
+            color: #555;
+            line-height: 1.5;
+            font-size: 0.9em;
+            text-align: justify;
+        }
+
+        .participants {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
+        }
+
+        .participants-label {
+            font-weight: 600;
+            color: #7f8c8d;
+            font-size: 0.8em;
+            margin-bottom: 4px;
+        }
+
+        .participants-count {
+            font-size: 1em;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        /* Venn Diagram Styles */
+        .convergence-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .convergence-container h1 {
+            border: none;
+            text-align: center;
+        }
+        
+        .diagram-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            margin: 40px 0;
+        }
+        
+        .venn-diagram {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+        }
+        
+        .circle {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            opacity: 0.8;
+            border: 3px solid rgba(255,255,255,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .circle:hover {
+            opacity: 0.95;
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+        
+        .circle-1 {
+            background: linear-gradient(135deg, #3d8991, #2c6e74);
+            top: 0;
+            left: 110px;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        
+        .circle-2 {
+            background: linear-gradient(135deg, #98b852, #7a9441);
+            top: 140px;
+            left: 20px;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .circle-3 {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+            top: 140px;
+            right: 20px;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .circle-label {
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+            text-align: center;
+            padding: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+        
+        .intersection-label {
+            position: absolute;
+            font-size: 11px;
+            font-weight: 600;
+            color: #2c3e50;
+            text-align: center;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            max-width: 130px;
+            line-height: 1.3;
+            border: 2px solid #98b852;
+        }
+        
+        .intersection-1-2 {
+            top: 110px;
+            left: 90px;
+        }
+        
+        .intersection-1-3 {
+            top: 110px;
+            right: 90px;
+        }
+        
+        .intersection-2-3 {
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .intersection-center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255,255,255,0.98);
+            border: 3px solid #3d8991;
+            font-size: 12px;
+            font-weight: 700;
+            max-width: 150px;
+            color: #3d8991;
+        }
+        
+        .convergence-insights {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            border-left: 5px solid #3d8991;
+        }
+        
+        .convergence-insights h3 {
+            margin: 0 0 25px 0;
+            color: #2c3e50;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .insight-item {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.5;
+            border-left: 4px solid #98b852;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .insight-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .document-container {
+                margin: 0 8px;
+            }
+
+            .section, .timeline-section {
+                padding: 5px;
+            }
+
+            .main-title {
+                font-size: 2em;
+            }
+
+            .timeline::before {
+                left: 25px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 50px !important;
+            }
+
+            .timeline-marker {
+                left: 25px;
+            }
+
+            .strategy-section {
+                padding: 5px;
+            }
+
+            .goal-section {
+                padding: 5px;
+            }
+
+            .goal-image {
+                float: none;
+                margin: 0 0 15px 0;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .goal-image.small,
+            .goal-image.smaller {
+                max-width: 100%;
+            }
+
+            .wrap-image {
+                float: none;
+                margin: 0 0 15px 0;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .wrap-image-right {
+                float: none;
+                margin: 0 0 15px 0;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .header-layout {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-image-left img {
+                max-width: 150px;
+            }
+
+            /* Venn Diagram Mobile Styles */
+            .convergence-container {
+                padding: 20px 10px;
+            }
+            
+            .diagram-container {
+                height: 400px;
+                margin: 20px 0;
+            }
+            
+            .venn-diagram {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .circle {
+                width: 160px;
+                height: 160px;
+            }
+            
+            .circle-1 {
+                left: 70px;
+                padding-top: 15px;
+            }
+            
+            .circle-2 {
+                top: 90px;
+                left: 10px;
+                padding-left: 15px;
+                padding-bottom: 15px;
+            }
+            
+            .circle-3 {
+                top: 90px;
+                right: 10px;
+                padding-right: 15px;
+                padding-bottom: 15px;
+            }
+            
+            .circle-label {
+                font-size: 12px;
+                padding: 8px;
+            }
+            
+            .intersection-label {
+                font-size: 9px;
+                padding: 4px 6px;
+                max-width: 80px;
+            }
+            
+            .intersection-1-2 {
+                top: 65px;
+                left: 50px;
+            }
+            
+            .intersection-1-3 {
+                top: 65px;
+                right: 50px;
+            }
+            
+            .intersection-2-3 {
+                bottom: 45px;
+            }
+            
+            .intersection-center {
+                font-size: 9px;
+                max-width: 90px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .document-container {
+                box-shadow: none;
+                background: white;
+            }
+
+            .timeline-item {
+                opacity: 1;
+                transform: none;
+                animation: none;
+            }
+
+            .goal-content {
+                max-height: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document-container">
+        <!-- Header -->
+        <div class="section">
+            <div class="header-layout">
+                <div class="header-image-left">
+                    <img src="https://i.imgur.com/WCrjdg5.png" alt="Triangle Trails Initiative" />
+                </div>
+                <div class="header-text">
+                    <h1 class="main-title">TTI Strategic Framework</h1>
+                    <p class="subtitle">Triangle Trails Initiative Strategic Plan</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline Visualization Section -->
+        <div class="timeline-section">
+            <div class="timeline-section-title">
+                <h1>Plan Development Process</h1>
+                <p>Visual representation of our strategic planning journey</p>
+                <div class="section-image">
+                    <img src="https://i.imgur.com/sS2mAgY.png" alt="Plan Development Process" />
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="phase-title">Stakeholder Interviews</div>
+                        <div class="phase-date">Six-Week Period</div>
+                        <div class="phase-description">
+                            One-on-one conversations by phone and Zoom with trail users, TTI leaders, and practitioners of comparable initiatives across the state and nation. These interviews surfaced insights on TTI's current strengths, untapped opportunities, and pressing challenges.
+                        </div>
+                        <div class="participants">
+                            <div class="participants-label">Engagement Method</div>
+                            <div class="participants-count">Individual Interviews</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="phase-title">Regional Workshop & Charrette</div>
+                        <div class="phase-date">March 4, 2025</div>
+                        <div class="phase-description">
+                            A full-day facilitated session with municipal leaders, engineers and planners, advocacy and nonprofit representatives, and parks & recreation professionals. Through small-group exercises and plenary discussions, attendees coalesced around three clear strategic priority areas.
+                        </div>
+                        <div class="participants">
+                            <div class="participants-label">Participants</div>
+                            <div class="participants-count">~80 Stakeholders</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="phase-title">Action Planning Session</div>
+                        <div class="phase-date">May 12, 2025</div>
+                        <div class="phase-description">
+                            Building on the March priorities, participants reconvened to flesh out specific goals, promising strategies, and key activities. This focused working session translated broad themes into concrete objectives and milestone-driven actions.
+                        </div>
+                        <div class="participants">
+                            <div class="participants-label">Participants</div>
+                            <div class="participants-count">24 Core Members</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="phase-title">Draft Review & Community Webinar</div>
+                        <div class="phase-date">June - July 16, 2025</div>
+                        <div class="phase-description">
+                            The TTI Executive Board shared a draft of the full plan with key leaders for feedback on clarity, feasibility, and alignment. A webinar was hosted for the broader community—trail users, nonprofit partners, local governments, funders, and volunteers—to present the draft and collect final suggestions.
+                        </div>
+                        <div class="participants">
+                            <div class="participants-label">Engagement Method</div>
+                            <div class="participants-count">Public Webinar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Theory of Action -->
+        <div class="section">
+            <h1>Theory of Action: Building on Strength to Connect the Region</h1>
+            <div class="text-wrap-section">
+                <div class="wrap-image">
+                    <img src="https://i.imgur.com/HlKNGXo.png" alt="Theory of Action" />
+                </div>
+                <p>The Triangle region is rich with assets—vibrant communities, active trail systems, dedicated local leaders, and a growing culture of outdoor recreation. Across municipalities, counties, and community organizations, people are already advancing efforts that reflect a shared belief: that trails are more than infrastructure—they are connectors of people, places, and opportunity.</p>
+                
+                <p>The Triangle Trails Initiative (TTI) exists to build on that momentum. This strategic plan is guided by a simple belief: when we align our people, platforms, and purpose, we unlock the full potential of the region's trails and deepen their collective impact.</p>
+                
+                <p>First, people across the region are already leading, innovating, and investing in trails. The first strategic priority, <strong>Developing a Regionally Connected Trail Network</strong>, focuses on elevating that local work into shared learning, identifying natural alignments, and creating lightweight structures for sustained collaboration. Rather than starting from scratch, this strategy amplifies what's already working and helps it travel farther.</p>
+                
+                <p>Second, powerful stories and local pride are ready to be shared. Communities know the value of their trails—they just need tools to connect that value to a regional identity. The second priority, <strong>Branding and Marketing of Trails</strong>, provides those tools: a shared brand, adaptable messaging, and user-friendly platforms, including a mobile app. These resources will help partners communicate their impact, engage new trail users, and attract investment in a collective vision.</p>
+                
+                <div class="wrap-image-right">
+                    <img src="https://i.imgur.com/1aSQg9Q.jpg" alt="Theory of Action Supporting Image" />
+                </div>
+                
+                <p>Third, leadership is emerging in this space. By supporting this leadership—especially from communities that haven't always had a seat at the table—TTI becomes more representative, resilient, and future-ready. The third priority, <strong>Succession Planning and Leadership Development</strong>, operationalizes a structure that welcomes new voices, distributes responsibility, and ensures the initiative's sustainability over time.</p>
+                
+                <p>Taken together, these three priorities reflect a belief in the region's existing strengths and its capacity to shape what comes next. Strong branding brings new energy to local efforts. Clearer leadership pathways invite broader participation. And coordinated planning connects existing trails into a visible, cohesive regional system.</p>
+                
+                <p>Over the next three years, TTI will deepen its role as a connector—of efforts, of communities, and of opportunities—powered by the people and strengths already in motion.</p>
+            </div>
+        </div>
+
+        <!-- Strategic Goals Convergence -->
+        <div class="section">
+            <div class="convergence-container">
+                <h1>Strategic Goals Convergence</h1>
+                <p class="subtitle">How our three strategic priorities work together to strengthen the Triangle Trails Initiative</p>
+                
+                <div class="diagram-container">
+                    <div class="venn-diagram">
+                        <div class="circle circle-1">
+                            <div class="circle-label">Goal 1:<br>Regional Trail<br>Network</div>
+                        </div>
+                        <div class="circle circle-2">
+                            <div class="circle-label">Goal 2:<br>Branding &<br>Marketing</div>
+                        </div>
+                        <div class="circle circle-3">
+                            <div class="circle-label">Goal 3:<br>Leadership &<br>Succession</div>
+                        </div>
+                        
+                        <div class="intersection-label intersection-1-2">
+                            Regional Vision Communication<br>
+                            Stakeholder Engagement
+                        </div>
+                        
+                        <div class="intersection-label intersection-1-3">
+                            Partnership Building<br>
+                            Coordination Infrastructure
+                        </div>
+                        
+                        <div class="intersection-label intersection-2-3">
+                            Ambassador Development<br>
+                            Community Outreach
+                        </div>
+                        
+                        <div class="intersection-label intersection-center">
+                            Regional Capacity Building<br>
+                            Sustainable Collaboration<br>
+                            Community Engagement
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Goal 1 -->
+        <div class="section">
+            <div class="goal-section">
+                <div class="goal-header" onclick="toggleGoal('goal1')" onkeydown="handleKeyDown(event, 'goal1')" role="button" tabindex="0" aria-expanded="false" aria-controls="goal1">
+                    <div class="goal-title">
+                        <h1>Goal 1: Develop and Advance a Regionally Connected Trail Network</h1>
+                        <span class="expand-icon" aria-hidden="true">▼</span>
+                    </div>
+                    <div class="goal-image">
+                        <img src="https://i.imgur.com/8W9GeKF.png" alt="Goal 1: Regionally Connected Trail Network" />
+                    </div>
+                    <p>The Triangle region includes many existing trails, but these trails remain largely disconnected—physically and strategically. This priority area focuses on learning from successful regional models, developing a shared vision that reflects local priorities, and establishing lightweight infrastructure to support coordination. Over the next three years, this work will move the region from aspiration to alignment, laying the groundwork for a sustainable and connected regional trail system.</p>
+                </div>
+                
+                <div class="goal-content" id="goal1">
+                    <div class="strategy-section">
+                        <h2>Strategy 1.1: Learn from Models and Build Collaborative Relationships</h2>
+                        <p>Before launching new efforts, it is essential to understand what has worked elsewhere and assess where trusted partners are already advancing related work. This strategy prioritizes listening, learning, and relationship-building to ground the regional trail vision in local strengths and proven strategies.</p>
+                        
+                        <h4>Key Activities:</h4>
+                        <ul>
+                            <li>Identify and study at least three models of successful regional trail networks from other metropolitan areas, extracting key lessons that could apply in the Triangle.</li>
+                            <li>Host a regional learning session to share insights from these models with planners, funders, and advocates across the region.</li>
+                            <li>Create an inventory of current planning efforts, trail facilities, and partner organizations already engaged in multi-jurisdictional trail work across the Triangle.</li>
+                            <li>Facilitate the identification of funding opportunities and collaborative grant strategies to support planning, construction, and activation of local and regional trail segments.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="strategy-section">
+                        <h2>Strategy 1.2: Clarify and Communicate the Regional Vision</h2>
+                        <p>Regional trail connectivity cannot advance without a shared understanding of what it is and why it matters. This strategy focuses on articulating a clear vision and communicating it across communities to build buy-in and momentum.</p>
+                        
+                        <h4>Key Activities:</h4>
+                        <ul>
+                            <li>Identify and support a core group of 3–5 regional trail champions, including at least one elected official and one community representative.</li>
+                            <li>Create a 2-page regional trail vision brief that highlights benefits (economic development, health, access) and identifies opportunities for local participation.</li>
+                            <li>Present this vision to at least 6 local councils, MPOs, or civic organizations</li>
+                            <li>Translate the regional vision into briefing materials for use in grant applications, partnership development, and public messaging.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="strategy-section">
+                        <h2>Strategy 1.3: Establish Light Infrastructure for Ongoing Coordination</h2>
+                        <p>This strategy creates low-burden mechanisms for information-sharing, collaboration, and sustained engagement. It emphasizes practicality and flexibility—helping partners stay aligned without requiring new bureaucracy.</p>
+                        
+                        <h4>Key Activities:</h4>
+                        <ul>
+                            <li>Create and refine a living database of priority connections that spans counties and reflects input from local governments and community stakeholders.</li>
+                            <li>Establish a shared digital workspace (e.g., Google Drive) that houses planning documents, contact lists, grant opportunities, and meeting notes.</li>
+                            <li>Conduct a gap analysis for the trail network—including existing trails, planned trails, and possible trail development.</li>
+                            <li>Launch a regional coordination consortium with regular meetings, hosted by a rotating partner organization, with agendas focused on implementation of comprehensive plan.</li>
+                            <li>Develop a comprehensive regional trail plan for the area which highlights implementation priorities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Goal 2 -->
+        <div class="section">
+            <div class="goal-section">
+                <div class="goal-header" onclick="toggleGoal('goal2')" onkeydown="handleKeyDown(event, 'goal2')" role="button" tabindex="0" aria-expanded="false" aria-controls="goal2">
+                    <div class="goal-title">
+                        <h1>Goal 2: Strengthen the Branding and Marketing of Regional Trails</h1>
+                        <span class="expand-icon" aria-hidden="true">▼</span>
+                    </div>
+                    <div class="goal-image small">
+                        <img src="https://i.imgur.com/PeRxuT4.jpg" alt="Goal 2: Branding and Marketing" />
+                    </div>
+                    <p>Many communities across the Triangle lack a clear understanding of what Triangle Trails Initiative (TTI) is, what it does, or why it matters. Without a shared brand, clear messaging, or visible value proposition, it is difficult to engage new partners, generate public enthusiasm, or build long-term support. This priority area focuses on building a unified identity, empowering local ambassadors to tell the story, and using data and tools to communicate return on investment and drive engagement.</p>
+                </div>
+                
+                <div class="goal-content" id="goal2">
+                    <div class="strategy-section">
+                        <h2>Strategy 2.1: Develop a Clear Brand and Shared Messaging Framework</h2>
+                        <p>This strategy ensures that TTI and its partners are speaking with a recognizable and consistent voice. It establishes the foundation for all subsequent outreach, advocacy, and storytelling.</p>
+                        
+                        <h4>Key Activities:</h4>
+                        <ul>
+                            <li>Develop a TTI brand identity, including logo, tagline, and visual style guide.</li>
+                            <li>Conduct a user and stakeholder analysis, designed to identify priority populations for targeted communications</li>
+                            <li>Create a message guide tailored to multiple audiences (e.g., elected officials, funders, residents, planners).</li>
+                            <li>Develop and implement a social media strategy—spanning Facebook, Instagram, LinkedIn, and Twitter—to share trail stories, photos, and upcoming events.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="strategy-section">
+                        <h2>Strategy 2.2: Equip Partners, Ambassadors, and Residents with Tools to Engage</h2>
+                        <p>No single organization can carry the message alone. This strategy builds local capacity and cultivates a shared network of trusted messengers, while also giving residents simple ways to explore and engage with the regional trail system.</p>
+                        
+                        <h4>Key Activities:</h4>
+                        <ul>
+                            <li>Develop a "regional story toolkit" that local communities can adapt to tell their piece of the regional trail story.</li>
+                            <li>Launch a Trailblazer Program to train and highlight trail users from underrepresented communities, sharing their stories to inspire broader inclusion.</li>
+                            <li>Adopt or co-develop a mobile app that supports:
+                                <ul>
+                                    <li>Trail discovery (map, photos, access info)</li>
+                                    <li>Local events and trail-based experiences</li>
+                                    <li>Feedback collection from trail users</li>
+                                    <li>Voluntary trail use data (with privacy safeguards)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="strategy-section">
+                        <h2>Strategy 2.3: Use Data to Demonstrate Value and Drive Advocacy</h2>
+                        <p>Branding efforts are only sustainable when audiences believe in the impact. This strategy ensures that messaging is grounded in real outcomes—economic, health-related, environmental, and community-building.</p>
+                        
+                        <h4>Key Activities:</h4>
+                        <ul>
+                            <li>Develop a regional trail data schema to guide consistent collection of trail use, access, and impact data.</li>
+                            <li>Collect and publish short case studies of how trails have benefited communities across the region.</li>
+                            <li>Translate trail impacts into compelling economic impact infographics or dashboards for use in advocacy and grant writing.</li>
+                            <li>Create a professional-produced short-form explainer video that visualizes the value of regional trail investment in everyday terms.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Goal 3 -->
+        <div class="section">
+            <div class="goal-section">
+                <div class="goal-header" onclick="toggleGoal('goal3')" onkeydown="handleKeyDown(event, 'goal3')" role="button" tabindex="0" aria-expanded="false" aria-controls="goal3">
+                    <div class="goal-title">
+                        <h1>Goal 3: Strengthen Leadership and Ensure Sustainable Succession for Triangle Trails Initiative</h1>
+                        <span class="expand-icon" aria-hidden="true">▼</span>
+                    </div>
+                    <div class="goal-image smaller">
+                        <img src="https://i.imgur.com/dweq6Yq.png" alt="Goal 3: Leadership and Succession" />
+                    </div>
+                    <p>As the Triangle Trails Initiative evolves, sustaining its mission requires cultivating new leaders, clarifying roles, and planning for leadership transitions. TTI's current leadership structure reflects strong early momentum but relies heavily on a small group of individuals. This priority area focuses on operationalizing the draft leadership structure, supporting emerging leaders, and embedding succession into the culture and structure of the initiative.</p>
+                </div>
+                
+                <div class="goal-content" id="goal3">
+                    <div class="strategy-section">
+                        <h2>Strategy 3.1: Establish Clear Roles and Succession Pathways Across the Organization</h2>
+                        <p>This strategy brings clarity to the evolving structure of TTI by defining roles, responsibilities, and expectations for board members, committee members, and staff/volunteers. It also lays the groundwork for thoughtful leadership transitions.</p>
+                        
+                        <h4>Key Activities:</h4>
+                        <ul>
+                            <li>Finalize and adopt a TTI organizational chart, specifying the purpose and expectations for the Executive Board, Board of Directors, Board of Advisors, and committees.</li>
+                            <li>Create and distribute a Board Member Role Description Packet, including term lengths, onboarding materials, and expectations for attendance and engagement.</li>
+                            <li>Conduct a skills and representation gap analysis to guide recruitment and succession planning.</li>
+                            <li>Develop a succession planning guide for the Executive Board and Board of Directors, including a calendar for nomination cycles and offboarding/onboarding steps.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="strategy-section">
+                        <h2>Strategy 3.2: Develop a Pipeline of Diverse Regional Leaders</h2>
+                        <p>This strategy builds a "bench" of engaged leaders from across the Triangle by lowering the barriers to participation, clarifying leadership pathways, and proactively identifying new voices.</p>
+                        
+                        <h4>Key Activities:</h4>
+                        <ul>
+                            <li>Hold two "Get Involved with TTI" info sessions per year (virtual or in-person) to introduce residents to board, committee, and ambassador opportunities.</li>
+                            <li>Partner with three new community-based organizations representing priority populations (people with disabilities, environmental advocacy groups, etc.) to identify and nominate new advisory board members or committee participants.</li>
+                            <li>Pilot a mentorship program in which current Executive Board and Board of Directors members are paired with ambassadors or committee participants focused on linking networks of relationships to new leaders.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="strategy-section">
+                        <h2>Strategy 3.3: Operationalize Committees and Distribute Leadership Responsibilities</h2>
+                        <p>To avoid over-reliance on a small group, this strategy focuses on activating committees and building lightweight systems for participation, ownership, and leadership development.</p>
+                        
+                        <h4>Key Activities:</h4>
+                        <ul>
+                            <li>Activate at least three committees (e.g., Fundraising, Marketing, Regional Network) with chairs, meeting cadences, and clear scopes of work.</li>
+                            <li>Develop a Committee Launch Toolkit with guidance on agendas, facilitation tips, and communication norms to support the development of future committees, as needed</li>
+                            <li>Rotate the leadership of committee leaders to build confidence and create leadership opportunities for newer members</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="section">
+            <div class="footer-link-section">
+                <a href="https://docs.google.com/document/d/1VMZSYAJqTORjZjGZbphfxEwu_7GsdeHPf4VLiQXBB2s/edit?usp=sharing" target="_blank" class="action-button">
+                    Action Planning Timeline
+                </a>
+            </div>
+            <div class="footer-image">
+                <img src="https://i.imgur.com/ym2ivIN.jpg" alt="Triangle Trails Initiative" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleGoal(goalId) {
+            const content = document.getElementById(goalId);
+            const header = content.previousElementSibling;
+            const isExpanded = content.classList.contains('expanded');
+            
+            if (isExpanded) {
+                content.classList.remove('expanded');
+                header.classList.remove('expanded');
+                header.setAttribute('aria-expanded', 'false');
+            } else {
+                content.classList.add('expanded');
+                header.classList.add('expanded');
+                header.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function handleKeyDown(event, goalId) {
+            // Handle Enter and Space key presses for accessibility
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                toggleGoal(goalId);
+            }
+        }
+    </script>
+</body>
+</html>
